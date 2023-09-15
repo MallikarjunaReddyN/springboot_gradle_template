@@ -1,0 +1,6 @@
+{% if is_db_required %}
+spring.jpa.database-platform=H2
+spring.datasource.url=jdbc:h2:./tmp/{{ db_name }};MODE=MYSQL
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+{% endif %}
